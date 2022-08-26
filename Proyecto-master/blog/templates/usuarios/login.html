@@ -51,7 +51,7 @@
         <div class="text-center mt-4 name">
             Twitter
         </div>
-        <form class="p-3 mt-3" method="POST">{% csrf_token %}
+        <form method="post">{% csrf_token %}
             {{ form.errors }}
             <div class="form-field d-flex align-items-center">
                 <span class="far fa-user"></span>
