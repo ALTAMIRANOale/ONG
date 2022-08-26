@@ -9,7 +9,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-CSRF_TRUSTED_ORIGINS = ['https://obscure-citadel-20100.herokuapp.com/']
+CSRF_TRUSTED_ORIGINS = ['https://*.herokuapp.com','https://*.127.0.0.1','https://obscure-citadel-20100.herokuapp.com']
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
