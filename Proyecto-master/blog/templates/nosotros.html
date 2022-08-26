@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/nosotros.css' %}">
+    <title>Home</title>
+</head>
+<body>
+    <div class="contenedor">
+        <header class="fila">
+            <div class="col-lg-2 col-md-3 col-sm-2 col-xs-12">
+                <div class="image-menu">
+                    <img src="{% static 'img/oportunidad-de-cambio2-121x62.png' %}" alt="">
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-8 col-xs-12">
+                <div class="bienve">
+                    {% if user.is_authenticated %}
+                        <a href="*" class="letra-menu">Bienvenid@s <span style="position:absolute;margin-left:6px;"><b>{{ user.username }}</b></span></a>
+                    {% else %}
+                        <a href="*" class="letra-menu">Bienvenid@s</a>
+                    {% endif %}
+                </div>
+            </div>
+        </header>    
+        <section class="fila">
+            <div class="col-lg-0 col-md-0 col-sm-0 col-xs-0"></div>
+            <div class="col-lg-0 col-md-0 col-sm-0 col-xs-0"></div>
+            <nav class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="nav-menu">
+                <ul class="nav">
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"><center  id="bot1"><a href="{% url 'inicio' %}" class="botones">Inicio</a></center></div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"><center  id="bot2"><a href="{% url 'noticias:listar_noticias' %}" class="botones">Noticia</a></center></div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"><center  id="bot3"><a href="{% url 'contacto' %}" class="botones">Contacto</a></center></div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"><center  id="bot4"><a href="{% url 'nosotros' %}" class="botones">Nosotros</a></center></div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"><center  id="bot5">{% if user.is_authenticated %}
+                        <a href="{% url 'logout' %}">Cerrar/Sesion</a>
+                    {% else %}
+                        <a href="{% url 'login' %}" class="botones">Iniciar/Sesion</a>
+                    {% endif %}
+                    </center></div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"><center  id="bot6"><a href="{% url 'usuarios:registro' %}" class="botones">Registrarse</a></center></div>
+                </ul>
+                </div>
+            </nav>
+        </section>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><div class="dsps-nav"><h4>Nosotros</h4></div></div>
+        <main class="fila">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <section class="wrapper">
+                    <div class="caja-wrapper"><h2>Mision</h2><p>- Fomentar el desarrollo de la educacion, de la <br>salud, y el bienestar social; Lograr el mejoramiento <br>de la calidad de vida. <br>- Estimular la participacion civica y solidaria. <br>Crear ambitos de integracion y recreacion. <br>- Promover la dignidad humana en toda su <br> dimension etica y cultural, particularmente la <br> igualdad efectiva de oportunidades entre el <br>hombre y la mujer y los derechos <br>de la infancia.</p></div>
+                    <div class="caja-wrapper"><h2>Vision</h2><p>Actualmente la ONG trabaja en tres instalaciones
+                        propias, en diferentes puntos de la localidad, a los que asisten mayoritariamente niños de barriadas carenciadas; En este contexto los comedores se convierten en un espacio de contención en el que, además de proporcionarles alimento, se les brinda
+                        esparcimiento, apoyo escolar, actividades culturales y recreativas; afecto y atención. Allí niños son escuchados y contenidos.
+                        Queremos llegar a ser una ONG que sea destacada en la región por el acompañamiento que brinda a la comunidad, el esfuerzo de quienes participamos y, por el apoyo de quienes nos ayudan y acompañan.</p></div>
+                </section>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><section class="texto-centro"><h4>Miembros</h4></section></div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><section class="wrapper2">
+                    <div class="caja-wrapper"><img src="{% static 'img/mbr-1920x1279.jpg' %}" alt=""></div>
+                    <div class="caja-wrapper"><h2>Presidente:</h2><p>Josefa Solís</p><h2>Consejeros:</h2><p>Silvana Clerici <br>
+                        Carlos Aguirre <br>
+                        Susana Maidana <br>
+                        Ernesto Núñez <br>
+                        Rubén Sandoval <br>
+                        Jorge Pucheta</p></div>
+                </section>
+            </div>
+        </main>
+    <footer><h3>© Copyright - Todos los derechos reservados</h3></footer>
+</body>
+</html>

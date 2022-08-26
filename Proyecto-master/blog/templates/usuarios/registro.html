@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asociacion Civil Oportunidad de Cambio</title>
+    <link rel="stylesheet" href="{% static 'css/registrarse.css'  %}">
+</head>
+<body>
+<div class="contenedor">
+    <header class="fila">
+        <div class="col-lg-2 col-md-3 col-sm-12 col-xs-12">
+        <div class="image-menu">
+            <img src="{% static 'img/oportunidad-de-cambio2-121x62.png' %}" alt="">
+        </div>
+        </div>
+        <div class="col-lg-3 col-md-8 col-sm-12 col-xs-12">
+        <div>
+            {% if user.is_authenticated %}
+                <a href="*" class="letra-menu">Bienvenid@s <span style="position:absolute;margin-left:6px;"><b>{{ user.username }}</b></span></a>
+            {% else %}
+            <a href="*" class="letra-menu">Bienvenid@s</a>
+            {% endif %}
+        </div>
+        </div>
+        <div class="col-lg-0 col-md-1 col-sm-0 col-xs-0"></div>
+            <div class="col-lg-0 col-md-2 col-sm-0 col-xs-0"></div>
+            <div class="col-lg-7 col-md-10 col-sm-12 col-xs-12">
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6"><center  id="bot1"><a href="{% url 'inicio' %}" class="botones">Inicio</a></center></div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6"><center  id="bot2"><a href="{% url 'noticias:listar_noticias' %}" class="botones">Noticia</a></center></div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6"><center  id="bot3"><a href="{% url 'contacto' %}" class="botones">Contacto</a></center></div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6"><center  id="bot4"><a href="{% url 'nosotros' %}" class="botones">Nosotros</a></center></div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6"><center  id="bot5">{% if user.is_authenticated %}
+                        <a href="{% url 'logout' %}">Cerrar/Sesion</a>
+                    {% else %}
+                        <a href="{% url 'login' %}" class="botones">Iniciar/Sesion</a>
+                    {% endif %}
+                    </center></div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6"><center  id="bot6"><a href="{% url 'usuarios:registro' %}" class="botones">Registrarse</a></center></div>
+            </div>
+    </header>
+    <section class="form-register">
+        <h4>Formulario Registro</h4>
+        <form action="" method="POST">{% csrf_token %}
+            {{ form.errors }}
+            <input class="controls" type="text" name="first_name" id="{{" placeholder="Nombre">
+            <input class="controls" type="text" name="last_name" id="{{" placeholder="Apellido">
+            <input class="controls" type="text" name="username" id="{{" placeholder="Usuario">
+            <input class="controls" type="email" name="email" id="email" placeholder="Ingrese su correo">
+            <input class="controls" type="password" name="password1" id="{{ " placeholder="Ingrese su Contraseña">
+            <input class="controls" type="password" name="password2" id="{{ " placeholder="Confirme su Contraseña">
+            <input class="botons" type="submit" value="Registrar">
+            <p><a href="{% url 'login' %}">¿Ya tengo cuenta?</a></p>
+        </form>
+    </section>
+</div>
+    <footer><h3>© Copyright - Todos los derechos reservados</h3></footer>
+</body>
+</html>

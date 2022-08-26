@@ -1,0 +1,417 @@
+*{
+    /* background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12); */
+
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+    font-family: sans-serif;
+    box-sizing: border-box;/* esto asegura relleno y borde esten incluidos ancho y alto total caja html */
+    
+}
+
+
+
+.contenedor{
+    position: relative;
+    margin: auto;
+    width: 100%;
+    height: auto;
+}
+
+.fila {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    height: auto;
+    clear: both;
+    display: table;
+}
+
+[class*="col-"]{
+    float: left;
+    padding: 10px;
+    /* border: 1px solid black; */
+    
+}
+
+/* PANTALLA DE ESCRITORIO GRANDE - LARGE (lg) */
+
+@media(min-width:1200px){
+
+.col-lg-12 {width: 100%;}
+.col-lg-11 {width: 91.66666667%;}
+.col-lg-10 {width: 83.33333333%;}
+.col-lg-9 {width: 75%;}
+.col-lg-8 {width: 66.66666667%;}
+.col-lg-7 {width: 58.33333333%;}
+.col-lg-6 {width: 50%;}
+.col-lg-5 {width: 41.66666667%;}
+.col-lg-4 {width: 33.33333333%;}
+.col-lg-3 {width: 25%;}
+.col-lg-2 {width: 16.66666667%;}
+.col-lg-1 {width: 8.33333333%;}
+}
+
+/* PANTALLA ESCRITORIO MEDIANO - MEDIUM (md) */
+
+@media(min-width:992px) and (max-width:1192px){
+
+    .col-md-12 {width: 100%;}
+    .col-md-12 #caja-dona{
+        margin-left: 430px;
+    }
+    .col-md-12 .wrapper{
+        width: 1024px;
+        margin-left: -10px;
+        padding: 47px;
+    }
+    .col-md-12 .caja-wrapper{
+        width:460px;
+        margin-top: 10px;
+    }
+    .col-md-12 nav {
+        width: 1024px;
+    }
+    .col-md-11 {width: 91.66666667%;}
+    .col-md-10 {width: 83.33333333%;
+        margin-left: 84px;}
+    .col-md-9 {width: 75%;}
+    .col-md-8 {width: 66.66666667%;}
+    .col-md-7 {width: 58.33333333%;}
+    .col-md-6 {width: 50%;}
+    .col-md-5 {width: 41.66666667%;}
+    .col-md-4 {width: 33.33333333%;}
+    .col-md-3 {width: 25%;}
+    .col-md-2 {width: 16.66666667%;}
+    .col-md-2 #bot1 {
+        margin-left: 85px;
+    }
+    .col-md-2 #bot2 {
+        margin-left: 30px;
+    }
+    .col-md-2 #bot3 {
+        margin-left: -8px;
+    }
+    .col-sm-2 #bot4 {
+        margin-left: -40px;
+    }
+    .col-sm-2 #bot5 {
+        margin-left: -70px;
+    }
+    .col-md-2 #bot6 {
+        margin-left: -66px;
+    }
+    .col-md-1 {width: 8.33333333%;}
+}
+
+/* PANTALLA DE TABLE - SMALL (sm) */
+
+@media(min-width:768px) and (max-width:991px){
+
+    .col-sm-12 {width: 100%;}
+    .col-sm-12 .wrapper{
+        width: 768px;
+        margin-left: -10px;
+        padding: 44px;
+    }
+    .col-sm-12 .wrapper div > img{
+        margin: -24px 0px 0px 8px;
+    }
+    .col-sm-12 .wrapper div > p{
+        padding: 80px 0px 0px 100px;
+    }
+    .col-sm-12 .wrapper div > h4{
+        margin: -55px 0px 0px 100px;
+    }
+    .col-sm-12 .caja-wrapper{
+        width:335px;
+    }
+    .col-sm-12 .nav{
+        margin-left: -20px;
+    }
+    .col-sm-11 {width: 91.66666667%;}
+    .col-sm-10 {width: 83.33333333%;}
+    .col-sm-9 {width: 75%;}
+    .col-sm-8 {width: 66.66666667%;}
+    .col-sm-8 .bienve{
+        margin-left: -120px;
+    }
+    .col-sm-8 .letra-menu{
+        margin-left: 12px;
+        margin-top: -4px;
+    }
+    .col-sm-7 {width: 58.33333333%;}
+    .col-sm-6 {width: 50%;}
+    .col-sm-5 {width: 41.66666667%;}
+    .col-sm-4 {width: 33.33333333%;}
+    .col-sm-3 {width: 25%;}
+    .col-sm-2 {width: 16.66666667%;}
+    .col-sm-2 #bot1 {
+        margin-left: 85px;
+    }
+    .col-sm-2 #bot2 {
+        margin-left: 146px;
+    }
+    .col-sm-2 #bot3 {
+        margin-left: 180px;
+    }
+    .col-sm-2 #bot4 {
+        margin-left: -40px;
+    }
+    .col-sm-2 #bot5 {
+        margin-left: -70px;
+    }
+    .col-sm-2 #bot6 {
+        margin-left: -66px;
+    }
+    .col-sm-1 {width: 8.33333333%;}
+}
+
+/* PANTALLA PHONES -  EXTRA SMALL (xs) */
+
+@media(max-width:767px){
+    
+    
+    
+    .col-xs-12  {width: 100%;}
+    .col-xs-12 .bienve{
+        margin-top: 57px;
+        margin-left: -145px;
+    }
+    .col-xs-12 #caja-dona{
+        margin-left: 90px;
+    }
+    .col-xs-12 .letra-dona{
+        font-size: 25px;
+        margin-left: 0px;
+    }
+    .col-xs-12 .wrapper{
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0px;
+        margin-top: 280px;
+        grid-auto-rows: 200px;
+        margin-bottom: 22px;
+        padding-left: 156px;
+    }
+    .col-xs-12 .caja-wrapper{
+        width: 366px;
+        height: 180px;
+        margin-top: 0px;
+        border-radius: 0px;    
+    }
+    .col-xs-12 .caja-wrapper > img {
+        margin: 0px 0px 0px 36px;
+    }
+    .col-xs-12 .caja-wrapper > p {
+        padding: 0px 0px 0px 122px;
+    }
+    .col-xs-12 .caja-wrapper > h4 {
+        margin: -56px 0px 0px 125px;
+    }
+    .col-xs-12 footer h3{
+        font-size: 14px;
+    }
+    .col-xs-12 .nav-menu {
+        margin-left: 0px;
+        height: 279px;
+    }
+    .col-xs-12 .nav {
+        display: grid;
+        margin-left: 170px;
+    }
+    .col-xs-11 {width: 91.66666667%;}
+    .col-xs-10 {width: 83.33333333%;}
+    .col-xs-9 {width: 75%;}
+    .col-xs-8 {width: 66.66666667%;}
+    .col-xs-7 {width: 58.33333333%;}
+    .col-xs-6 {width: 50%;
+        margin-left: -54px;}
+    .col-xs-6 #bot1 {
+        margin-left: 130px;
+    }
+    .col-xs-6 #bot2 {
+        margin-left: 146px;
+    }
+    .col-xs-6 #bot3 {
+        margin-left: 130px;
+    }
+    .col-xs-6 #bot4 {
+        margin-left: 147px;
+    }
+    .col-xs-6 #bot5 {
+        margin-left: 110px;
+    }
+    .col-xs-6 #bot6 {
+        margin-left: 135px;
+    }
+    .col-xs-5 {width: 41.66666667%;}
+    .col-xs-4 {width: 33.33333333%;}
+    .col-xs-4 #bot1{
+        margin-left: -55px;
+    }
+    .col-xs-3 {width: 25%;}
+    .col-xs-2 {width: 16.66666667%;}
+    .col-xs-1 {width: 8.33333333%;}
+    .col-xs-0 {display: none;}
+}
+
+
+.image-menu{
+    width: 150px;
+    padding-top: 40px;
+}
+
+.image-menu img{
+    position: relative;
+    margin-left: 20px;
+    object-fit: cover;
+}
+
+.letra-menu{
+    width: 150px;
+    display: block;
+    color: rgb(15, 18, 19);
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: -68px;
+    margin-top: 68px;
+}
+
+.letra-menu:hover{
+    color: rgba(34, 34, 34, 0.709);
+}
+
+.bienve{
+    margin-top: 106px;
+    margin-left: -220px;
+    height: 35px;
+}
+
+.botones:hover{
+    color: rgb(24, 25, 25);
+}
+
+
+
+#bot1 {
+    position: relative;
+    margin: auto;
+    margin-left: 184px;
+    border-radius: 50%;
+}
+#bot2 {
+    position: relative;
+    margin: auto;
+    margin-left: 122px;
+    border-radius: 50%;
+}
+#bot3 {
+    position: relative;
+    margin: auto;
+    margin-left: 77px;
+    border-radius: 50%;
+}
+#bot4 {
+    position: relative;
+    margin: auto;
+    margin-left: 42px;
+    border-radius: 50%;
+}
+#bot5 {
+    position: relative;
+    margin: auto;
+    margin-left: 11px;
+    border-radius: 50%;
+}
+#bot6 {
+    position: relative;
+    margin: auto;
+    border-radius: 50%;
+}
+header center{
+    width: 80px;
+    height: 59px;
+    
+}
+header center a{
+    font-size: 19px;
+    color: rgb(6, 30, 245);
+    line-height: 112px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+
+
+body{
+    color: rgb(11, 11, 11);
+    background-color:#008793;
+}
+
+.form-register {
+    width: 400px;
+    background-color: rgb(10, 21, 102);
+    padding: 30px;
+    margin: auto;
+    margin-top: 140px;
+    border-radius: 4px;
+    font-family: "calibri";
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+}
+
+.form-register h4 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.controls {
+    width: 100%;
+    background-color: rgb(10, 21, 102);
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid rgb(35, 77, 204);
+    font-family: "calibri";
+    font-size: 18px;
+    color: white;
+}
+
+.form-register p {
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+}
+
+.form-register a {
+    color: white;
+    text-decoration: none;
+
+}
+
+.form-register a:hover {
+    color: white;
+    text-decoration: underline;    
+}
+
+.form-register .botons {
+    width: 100%;
+    background-color: rgb(77, 169, 239);
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+}
+
+footer{
+    position: relative;
+    top: 55px;
+    border-top: 1px solid black;
+    line-height: 35px;
+}
+
+footer >h3{
+    color: #000;
+}

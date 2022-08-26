@@ -1,0 +1,28 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BLOG</title>
+
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+</head>
+<body>
+
+	<!-- MENU -->
+	<div class="div-menu">
+		<img src="{% static 'img/logo.png' %}" width="300" height="200">
+		<div class="div-menu">
+			<a href="{% url 'noticias:listar_noticias' %}">IR A LISTAR NOTICIAS</a>
+			<a href="{% url 'inicio' %}">HOME</a>
+		</div>
+	</div>
+	<br><br>
+	<!-- FIN MENU -->
+
+	{% block contenido %}
+
+	{% endblock contenido %}
+
+</body>
+</html>
