@@ -1,6 +1,10 @@
 from .base import *
 
 # SECURITY WARNING: don't run with debug turned on in production!
+
+SECRET_KEY = 'django-insecure-cwd9bne^ytkj&r3fz4$zl3%v$tkoj#kejlo=0e+4s)x6yex=@@'
+
+
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
