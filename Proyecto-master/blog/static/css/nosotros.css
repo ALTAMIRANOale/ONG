@@ -59,6 +59,28 @@ body{
 .col-lg-4 {width: 33.33333333%;}
 .col-lg-3 {width: 25%;}
 .col-lg-2 {width: 16.66666667%;}
+.col-lg-2 #bot1{
+    padding-top: 20px;
+}
+.col-lg-2 #bot2{
+    padding-top: 20px;
+}
+.col-lg-2 #bot3{
+    padding-top: 20px;
+}
+.col-lg-2 #bot4{
+    padding-top: 20px;
+}
+.col-lg-2 #bot5{
+    padding-top: 20px;
+}
+.col-lg-2 #bot6{
+    padding-top: 20px;
+}
+.col-lg-2 #bot7{
+    padding-top: 5px;
+    margin-top:13px;
+}
 .col-lg-1 {width: 8.33333333%;}
 }
 
@@ -106,25 +128,10 @@ body{
     .col-md-5 {width: 41.66666667%;}
     .col-md-4 {width: 33.33333333%;}
     .col-md-3 {width: 25%;}
+    .col-md-3 .bienve{
+        margin-left: -208px;
+    }
     .col-md-2 {width: 16.66666667%;}
-    .col-md-2 #bot1 {
-        margin-left: 200px;
-    }
-    .col-md-2 #bot2 {
-        margin-left: 100px;
-    }
-    .col-md-2 #bot3 {
-        margin-left: -62px;
-    }
-    .col-md-2 #bot4 {
-        margin-left: -218px;
-    }
-    .col-md-2 #bot5 {
-        margin-left: -338px;
-    }
-    .col-md-2 #bot6 {
-        margin-left: -438px;
-    }
     .col-md-1 {width: 8.33333333%;}
 }
 
@@ -136,7 +143,7 @@ body{
     .col-sm-12 .wrapper{
         width: 768px;
         height: 780px;
-        margin-left: -10px;
+        margin-left: 186px;
         padding: 44px;
     }
     .col-sm-12 .wrapper2{
@@ -228,12 +235,17 @@ body{
         font-size: 25px;
         margin-left: 0px;
     }
+    .col-xs-12 .bienve > a > span{
+        position: absolute;
+        margin-top: 40px;
+        margin-left: -144px;
+    }
     .col-xs-12 .wrapper{
         grid-template-columns: repeat(1, 300px);
         width: 366px;
         height: 1560px;
         padding: 0px;
-        margin-top: 280px;
+        margin-top: 119px;
         margin-left:0px;
         grid-auto-rows: 780px;
         margin-bottom: 22px;
@@ -283,8 +295,11 @@ body{
         margin-left: 160px;
     }
     .col-xs-12 .dsps-nav{
-        margin-top: 200px;
+        margin-top: -82px;
         margin-bottom: -190px;
+    }
+    .col-xs-12 footer h3{
+        font-size: 16px;
     }
     .col-xs-11 {width: 91.66666667%;}
     .col-xs-10 {width: 83.33333333%;}
@@ -292,6 +307,28 @@ body{
     .col-xs-8 {width: 66.66666667%;}
     .col-xs-7 {width: 58.33333333%;}
     .col-xs-6 {width: 50%;}
+    .col-xs-6 #bot1{
+        margin-left: -12px;
+    }
+    .col-xs-6 #bot2{
+        margin-left: 25px;
+    }
+    .col-xs-6 #bot3{
+        margin-left: 5px;
+    }
+    .col-xs-6 #bot4{
+        margin-left: 36px;
+    }
+    .col-xs-6 #bot5{
+        margin-left: 9px;
+    }
+    .col-xs-6 #bot6{
+        margin-left: 42px;
+    }
+    .col-xs-6 #bot7{
+        margin-left: -100px;
+        margin-top: -59px;
+    }
     .col-xs-5 {width: 41.66666667%;}
     .col-xs-4 {width: 33.33333333%;}
     .col-xs-4 #bot1{
@@ -323,31 +360,20 @@ body{
 
 
 
-.nav-menu{
-    position: absolute;
-    width: 100%;
-    margin-left: -11px;
-    height: 70px;
-    margin-top: 20px;
-    background-color: #1a0755e9;
+header{
+    padding-bottom: 42px;
+    border-bottom: 2px solid black;
 }
 
-.nav{
-    position: relative;
-    height: 60px;
-    margin-left: 40px;
-    padding-top: 12px;
-    display: flex;
-    margin-top: 6px;
-}
+
 
 .image-menu{
     width: 150px;
+    padding-top: 40px;
 }
 
 .image-menu img{
     position: relative;
-    margin-top: 10px;
     margin-left: 20px;
     object-fit: cover;
 }
@@ -365,14 +391,15 @@ body{
 .letra-menu:hover{
     color: rgba(34, 34, 34, 0.709);
 }
+
 .bienve{
-    margin-top: 74px;
+    margin-top: 106px;
     margin-left: -220px;
     height: 35px;
 }
 
 .botones:hover{
-    color: rgb(112, 246, 246);
+    color: rgb(52, 71, 71);
 }
 
 
@@ -380,31 +407,38 @@ body{
 #bot1 {
     position: relative;
     margin: auto;
-    margin-left: 679px;
+    margin-left: 182px;
     border-radius: 50%;
 }
 #bot2 {
     position: relative;
     margin: auto;
-    margin-left: 532px;
+    margin-left: 122px;
+    border-radius: 50%;
+}
+#bot7 {
+    position: relative;
+    margin: auto;
+    margin-left: 106px;
+    margin-top: -6px;
     border-radius: 50%;
 }
 #bot3 {
     position: relative;
     margin: auto;
-    margin-left: 392px;
+    margin-left: 77px;
     border-radius: 50%;
 }
 #bot4 {
     position: relative;
     margin: auto;
-    margin-left: 272px;
+    margin-left: 42px;
     border-radius: 50%;
 }
 #bot5 {
     position: relative;
     margin: auto;
-    margin-left: 148px;
+    margin-left: 11px;
     border-radius: 50%;
 }
 #bot6 {
@@ -412,9 +446,21 @@ body{
     margin: auto;
     border-radius: 50%;
 }
+header center{
+    width: 80px;
+    height: 59px;
+    
+}
 
-section center a{
-    color: beige;
+#bot7 a {
+    color: #e0a8e9;
+}
+header center a{
+    font-size: 19px;
+    color: rgb(1, 1, 1);
+    line-height: 112px;
+    text-decoration: none;
+    border-radius: 5px 5px 5px 5px;
 }
 
 
@@ -530,6 +576,7 @@ main{
 
 footer{
     position: relative;
+    border-top: 1px solid black;
     top: 0px;
     line-height: 35px;
 }

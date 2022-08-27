@@ -2,7 +2,6 @@ from django.urls import path
 
 from . import views
 
-# LA URL EMPIEZA CON Noticias/ <este archivo>
 
 app_name = 'noticias'
 

@@ -11,4 +11,4 @@ def Nosotros(request):
 
 
 def Home(request):
-	return render(request,'home.html')
+	return render(request,'noticias/noticias.html')

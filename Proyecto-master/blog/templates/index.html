@@ -1,46 +1,15 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/indexx.css' %}">
-    <link rel="shortcut icon" href="{% static 'img/oportunidad-de-cambio2-121x62.png' %}" type="image/x-icon">
-    <title>Home</title>
-</head>
-<body>
-<div class="contenedor">
-    <header class="fila">
-            <div class="col-lg-2 col-md-3 col-sm-4 col-xs-12"><div class="image-menu">
-                    <img src="{% static 'img/oportunidad-de-cambio2-121x62.png' %}" alt="">
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-8 col-sm-8 col-xs-12">
-                <div class="bienve">
-                    {% if user.is_authenticated %}
-                        <a href="*" class="letra-menu">Bienvenid@s <span style="position:absolute;margin-left:6px;"><b>{{ user.username }}</b></span></a>
-                    {% else %}
-                        <a href="*" class="letra-menu">Bienvenid@s</a>
-                    {% endif %}
-                </div>
-            </div>
-            <div class="col-lg-0 col-md-1 col-sm-0 col-xs-0"></div>
-            <div class="col-lg-0 col-md-2 col-sm-0 col-xs-0"></div>
-            <div class="col-lg-7 col-md-10 col-sm-12 col-xs-12">
-                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6"><center  id="bot1"><a href="{% url 'inicio' %}" class="botones">Inicio</a></center></div>
-                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6"><center  id="bot2"><a href="{% url 'noticias:listar_noticias' %}" class="botones">Noticia</a></center></div>
-                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6"><center  id="bot3"><a href="{% url 'contacto' %}" class="botones">Contacto</a></center></div>
-                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6"><center  id="bot4"><a href="{% url 'nosotros' %}" class="botones">Nosotros</a></center></div>
-                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6"><center  id="bot5">{% if user.is_authenticated %}
-                        <a href="{% url 'logout' %}">Cerrar/Sesion</a>
-                    {% else %}
-                        <a href="{% url 'login' %}" class="botones">Iniciar/Sesion</a>
-                    {% endif %}
-                    </center></div>
-                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6"><center  id="bot6"><a href="{% url 'usuarios:registro' %}" class="botones">Registrarse</a></center></div>
-            </div>
-    </header>    
+
+
+
+
+
+
+
+{% block contenido %}
+<link rel="stylesheet" href="{% static 'css/indexx.css' %}">
+<div class="contenedor">    
     <main class="fila">
         <section class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="caja">    
@@ -52,7 +21,7 @@
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <section class="imagen-fondo">
                 <h3 class="letra-dona">Ayudanos a seguir ayudando</h3>
-                <div id="caja-dona"><a href="" class="boton-dona">Donaciones</a></div>
+                <div id="caja-dona"><a href="http://facebook.com/oportunidadecambio/" target="_blank" class="boton-dona">Donaciones</a></div>
             </section>
         </div>
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -64,7 +33,6 @@
             </section>
         </div>
     </main>
-</div>
-<footer><h3>© Copyright - Todos los derechos reservados</h3></footer>    
-</body>
-</html>
+</div class="fila">
+
+{% endblock contenido %}

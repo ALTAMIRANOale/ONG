@@ -10,6 +10,4 @@ urlpatterns = [
     
     path('registro/', views.Registro.as_view(), name = 'registro'),
 
-   
-
 ]

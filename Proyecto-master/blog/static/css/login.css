@@ -18,7 +18,6 @@
     text-decoration: none;
     font-family: sans-serif;
     box-sizing: border-box;/* esto asegura relleno y borde esten incluidos ancho y alto total caja html */
-    
 }
 
 .contenedor{
@@ -85,22 +84,22 @@
     .col-md-3 {width: 25%;}
     .col-md-2 {width: 16.66666667%;}
     .col-md-2 #bot1{
-        margin-left: 162px;
+        margin-left: 206px;
     }
     .col-md-2 #bot2{
-        margin-left: 60px;
+        margin-left: 127px;
     }
     .col-md-2 #bot3{
-        margin-left: -25px;
+        margin-left: 65px;
     }
     .col-md-2 #bot4{
-        margin-left: -100px;
+        margin-left: 14px;
     }
     .col-md-2 #bot5{
-        margin-left: -172px;
+        margin-left: -36px;
     }
     .col-md-2 #bot6{
-        margin-left: -211px;
+        margin-left: -50px;
     }
     .col-md-1 {width: 8.33333333%;}
 }
@@ -144,7 +143,7 @@
         margin-left: 30px;
     }
     .col-sm-2 #bot6{
-        margin-left: ;
+        margin-left: 20;
     }
     .col-sm-1 {width: 8.33333333%;}
 }
@@ -160,12 +159,19 @@
     .col-xs-12 .wrapper{
         margin-top: 240px;
     }
+    .col-xs-12 .image-menu{
+        margin-left: 86px;
+    }
     .col-xs-12 .nav-menu {
         height: 111px;
     }
-    .col-xs-12 .bienveni{
-        margin-left: -166px;
+    .col-xs-12 .bienve{
+        margin-left: -136px;
+        margin-top:64px;
 
+    }
+    .col-xs-12 footer h3{
+        font-size: 16px;
     }
     .col-xs-11 {width: 91.66666667%;}
     .col-xs-10 {width: 83.33333333%;}
@@ -173,30 +179,34 @@
     .col-xs-8 {width: 66.66666667%;}
     .col-xs-7 {width: 58.33333333%;}
     .col-xs-6 {width: 50%;}
+    .col-xs-6 #bot1{
+        margin-left: -12px;
+    }
+    .col-xs-6 #bot2{
+        margin-left: 25px;
+    }
+    .col-xs-6 #bot3{
+        margin-left: 5px;
+    }
+    .col-xs-6 #bot4{
+        margin-left: 36px;
+    }
+    .col-xs-6 #bot5{
+        margin-left: 9px;
+    }
+    .col-xs-6 #bot6{
+        margin-left: 42px;
+    }
     .col-xs-5 {width: 41.66666667%;}
     .col-xs-4 {width: 33.33333333%;}
-    .col-xs-4 #bot1 {
-        margin-left: 0px;
-    }
-    .col-xs-4 #bot2 {
-        margin-left: -5px;
-    }
-    .col-xs-4 #bot3 {
-        margin-left: 8px;
-    }
-    .col-xs-4 #bot4 {
-        margin-left: -20px;
-    }
-    .col-xs-4 #bot5 {
-        margin-left: -7px;
-    }
-    .col-xs-4 #bot1 {
-        margin-left: px;
-    }
     .col-xs-3 {width: 25%;}
     .col-xs-2 {width: 16.66666667%;}
     .col-xs-1 {width: 8.33333333%;}
     .col-xs-0 {display: none;}
+}
+
+header {
+    border-bottom: 1px solid black;
 }
 
 
@@ -236,7 +246,7 @@
 }
 
 .botones:hover{
-    color: rgb(24, 25, 25);
+    color: rgb(52, 71, 71);
 }
 
 
@@ -283,7 +293,7 @@ header center{
 }
 header center a{
     font-size: 19px;
-    color: rgb(6, 30, 245);
+    color: rgb(1, 1, 1);;
     text-decoration: none;
     line-height: 112px;
     border-radius: 5px 5px 5px 5px;

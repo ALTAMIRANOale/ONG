@@ -21,10 +21,10 @@ def Listar(request):
 	return render(request,'noticias/noticias.html',ctx)
 
 # EJEMPLO DE COMO DESARMA EL CTX EL TEMPLATE.
-# ctx['nombre'] = 'nicolas'
+# ctx['wilson'] = 'wilson'
 # ctx['notas'] = [5,6,9]
 # EL TEMPLATE ya separa el diccionario
-# nombre = 'nicolas'
+# nombre = 'wilson'
 # notas = [5,6,9]
 
 

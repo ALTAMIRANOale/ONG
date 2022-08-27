@@ -1,7 +1,7 @@
 {{ load static }}
 *{
     /* background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12); */
-
+    background-color:rgb(219, 242, 245);
     margin: 0px;
     padding: 0px;
     list-style: none;
@@ -13,7 +13,6 @@
 
 body{
     color: rgb(11, 11, 11);
-    background-color:#008793;
 }
 
 .contenedor{
@@ -48,7 +47,8 @@ body{
 .col-lg-10 {width: 83.33333333%;}
 .col-lg-9 {width: 75%;}
 .col-lg-8 {width: 66.66666667%;}
-.col-lg-7 {width: 58.33333333%;}
+.col-lg-7 {width: 58.33333333%;
+    margin-top: -4px;}
 .col-lg-6 {
     width: 50%;
     color: #223088;}
@@ -132,6 +132,11 @@ body{
         margin-top: 57px;
         margin-left: -145px;
     }
+    .col-xs-12 .bienve > a > span{
+        position: absolute;
+        margin-top: 40px;
+        margin-left: -144px;
+    }
     .col-xs-12 #caja-dona{
         margin-left: 90px;
     }
@@ -145,7 +150,7 @@ body{
         grid-auto-rows: 200px;
     }
     .col-xs-12 footer h3{
-        font-size: 14px;
+        font-size: 16px;
     }
     .col-xs-11 {width: 91.66666667%;}
     .col-xs-10 {width: 83.33333333%;}
@@ -153,12 +158,38 @@ body{
     .col-xs-8 {width: 66.66666667%;}
     .col-xs-7 {width: 58.33333333%;}
     .col-xs-6 {width: 50%;}
+    .col-xs-6 #bot1{
+        margin-left: -12px;
+    }
+    .col-xs-6 #bot2{
+        margin-left: 25px;
+    }
+    .col-xs-6 #bot3{
+        margin-left: 5px;
+    }
+    .col-xs-6 #bot4{
+        margin-left: 36px;
+    }
+    .col-xs-6 #bot5{
+        margin-left: 9px;
+    }
+    .col-xs-6 #bot6{
+        margin-left: 42px;
+    }
+    .col-xs-6 #bot7{
+        margin-left: -100px;
+        margin-top: -59px;
+    }
     .col-xs-5 {width: 41.66666667%;}
     .col-xs-4 {width: 33.33333333%;}
     .col-xs-3 {width: 25%;}
     .col-xs-2 {width: 16.66666667%;}
     .col-xs-1 {width: 8.33333333%;}
     .col-xs-0 {display: none;}
+}
+
+header{
+    border-bottom: 2px solid black;
 }
 
 
@@ -195,7 +226,7 @@ body{
 }
 
 .botones:hover{
-    color: rgb(24, 25, 25);
+    color: rgb(52, 71, 71);
 }
 
 
@@ -203,13 +234,20 @@ body{
 #bot1 {
     position: relative;
     margin: auto;
-    margin-left: 184px;
+    margin-left: 182px;
     border-radius: 50%;
 }
 #bot2 {
     position: relative;
     margin: auto;
     margin-left: 122px;
+    border-radius: 50%;
+}
+#bot7 {
+    position: relative;
+    margin: auto;
+    margin-left: 106px;
+    margin-top: -6px;
     border-radius: 50%;
 }
 #bot3 {
@@ -240,9 +278,13 @@ header center{
     height: 59px;
     
 }
+
+#bot7 a {
+    color: #e0a8e9;
+}
 header center a{
     font-size: 19px;
-    color: rgb(6, 30, 245);
+    color: rgb(1, 1, 1);
     line-height: 112px;
     text-decoration: none;
     border-radius: 5px 5px 5px 5px;
@@ -295,7 +337,7 @@ main{
     border-radius: 8px;
     width: 170px;
     height: 30px;
-    margin-left: 550px;
+    margin-left: 600px;
 }
 
 .boton-dona{
@@ -327,6 +369,7 @@ main{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: 400px;
+    margin-bottom: 10px;
     padding: 70px;
     grid-gap:20px;
 
@@ -340,6 +383,7 @@ main{
 
 footer{
     position: relative;
-    top:-4px;
+    top:0px;
+    border-top: 1px solid black;
     line-height: 35px;
 }
