@@ -4,16 +4,22 @@ from pathlib import Path
 import os
 from django.urls import reverse_lazy
 
+<<<<<<< HEAD
 
+=======
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
+>>>>>>> 980d073 (hola-tod-nuevo)
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
+# Quick-start development settings - unsuitable for production
+# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 AUTH_USER_MODEL = 'usuarios.Usuario'
 
 LOGIN_REDIRECT_URL = reverse_lazy('inicio')
 LOGOUT_REDIRECT_URL = reverse_lazy('inicio')
-LOGIN_URL = reverse_lazy('login')
+LOGIN_URL = reverse_lazy('inicio')
 
 
 INSTALLED_APPS = [

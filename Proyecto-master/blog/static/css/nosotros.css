@@ -1,20 +1,25 @@
-*{
-    /* background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12); */
+/*
+#menu {
+    height: 50px;
+}
 
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
+#menu ul {
     text-decoration: none;
-    font-family: sans-serif;
-    box-sizing: border-box;/* esto asegura relleno y borde esten incluidos ancho y alto total caja html */
-    
+    list-style: none;
+    line-height: 50px;
 }
 
-body{
+p{
+    margin: 5px;
+    padding: 2px;
+}*/
+
+.row{
     color: rgb(11, 11, 11);
-    background-color:#008793
+    background-color:#008793;
 }
 
+<<<<<<< HEAD
 .contenedor{
     position: relative;
     margin: auto;
@@ -580,3 +585,5 @@ footer{
     top: 0px;
     line-height: 35px;
 }
+=======
+>>>>>>> 980d073 (hola-tod-nuevo)

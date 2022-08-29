@@ -25,7 +25,7 @@ DATABASES = {
         'Trusted_Connection':'yes',
         'HOST': 'localhost',
         'OPTIONS':{
-        'driver':'SQL Server Native Client 11.0',
+        	'driver':'SQL Server Native Client 11.0',
         }
     },
 }

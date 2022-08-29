@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views.generic.list import ListView
-from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView
+from django.views.generic.detail import DetailView
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 
@@ -18,7 +18,14 @@ def Listar(request):
 	#PASARLO AL TEMPLATE
 	ctx['notis'] = todas
 
-	return render(request,'noticias/noticias.html',ctx)
+	return render(request,'noticias/noticia2.html',ctx)
+
+
+class AddNoticia(CreateView):
+	model = Noticia
+	fields = ['autor', 'titulo', 'cuerpo', 'imagen', 'categoria']
+	template_name = 'noticias/addNoticia.html'
+	success_url = reverse_lazy('noticias:listar_noticias')
 
 # EJEMPLO DE COMO DESARMA EL CTX EL TEMPLATE.
 # ctx['wilson'] = 'wilson'
@@ -39,17 +46,11 @@ def Detalle_Noticia_Funcion(request, pk):
 #VISTA BASADA EN CLASES
 class Detalle_Noticia_Clase(LoginRequiredMixin, DetailView):
 	model = Noticia
-	template_name = 'noticias/detallenoticia.html'
+	template_name = 'noticias/detalle2.html'
 
 class ComentarNoticia(ListView):
     model=Noticia
     template_name = 'noticias/agregarnoticia.html'
-
-class AddNoticia(CreateView):
-    model = Noticia
-    fields = ['autor','titulo', 'cuerpo', 'imagen', 'categoria']
-    template_name = 'noticias/addNoticia.html'
-    success_url = reverse_lazy('noticias:listar_noticias')
 
 #SI USO UNA VISTA BASADA EN CLASE EL CONTEXTO SE LLAMA:
 # SI ES UNO SOLO object

@@ -16,8 +16,8 @@ class RegistroForm(UserCreationForm):
     class Meta:
         model = Usuario
         fields = [
-            'first_name',
-            'last_name',
+            #'first_name',
+            #'last_name',
             'username',
             'email',
             'password1',
