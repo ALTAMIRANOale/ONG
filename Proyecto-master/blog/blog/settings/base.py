@@ -4,11 +4,7 @@ from pathlib import Path
 import os
 from django.urls import reverse_lazy
 
-<<<<<<< HEAD
 
-=======
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
->>>>>>> 980d073 (hola-tod-nuevo)
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
