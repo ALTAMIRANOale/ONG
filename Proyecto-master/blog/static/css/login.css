@@ -3,6 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 /* Reseting */
+/* Reseting */
+/* Reseting */
 /** {
     margin: 0;
     padding: 0;
@@ -373,7 +375,7 @@ body {
     background-color: #03304cdb;
     color: rgb(0, 0, 0);
     border-radius: 25px;
-    #box-shadow: -3px 3px 10px #c80761,
+    box-shadow: -3px 3px 10px #c80761,
         -3px -4px 6px rgb(249, 5, 156);
     letter-spacing: 1.3px;
 }
