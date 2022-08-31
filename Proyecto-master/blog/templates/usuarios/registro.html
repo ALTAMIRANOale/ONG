@@ -37,7 +37,7 @@
         <div class="container-fluid">
             <div class="navbar-brand">
                 <span class="navbar-logo">
-                    <a href="https://mobiri.se">
+                    <a href="">
                         <img src="{% static 'assets/images/fondo-324x96.png' %}" alt="Mobirise Website Builder" style="height: 4.7rem;">
                     </a>
                 </span>
@@ -68,7 +68,7 @@
                                                 <a 
                     class="nav-link link text-black dropdown-toggle display-4" href="" data-toggle="dropdown-submenu" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Staff</a><div 
                     class="dropdown-menu" aria-labelledby="dropdown-535"><a 
-                    class="text-black show dropdown-item text-primary display-4" href={% url 'noticias:addnoti' %}>Cargar Noticia</a></div></li>
+                    class="text-black show dropdown-item text-primary display-4" href="{% url 'noticias:addnoti' %}">Cargar Noticia</a></div></li>
                     {% endif %}
                     <li 
                     class="nav-item dropdown">
@@ -79,7 +79,7 @@
                     <a 
                     class="nav-link link text-black dropdown-toggle display-4" href="" data-toggle="dropdown-submenu" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Cuenta</a><div 
                     class="dropdown-menu" aria-labelledby="dropdown-734"><a 
-                    class="text-black dropdown-item show text-primary display-4" href="{% url 'login' %}" aria-expanded="false">Iniciar session</a><a
+                    class="text-black dropdown-item show text-primary display-4" href="{% url 'login' %}" aria-expanded="false">Iniciar Sesion</a><a
                     class="text-black show dropdown-item text-primary display-4" href="{% url 'usuarios:registro' %}">Registrarse</a></div></li></ul>
                     {% endif %}
                     <div class="icons-menu">
@@ -106,7 +106,6 @@
         <input class="controls" type="password" name="password1" id="contraseña" placeholder="Ingrese su Contraseña">
         <input class="controls" type="password" name="password2" id="contraseña" placeholder="Confirme su Contraseña">
         <input class="botons" type="submit" value="Registrar">
-        <p>Estoy de acuerdo con <a href="#">Terminos y condiciones</a></p>
         <p><a href="{% url 'login' %}">¿Ya tengo cuenta?</a></p>
         </form>
     </section>

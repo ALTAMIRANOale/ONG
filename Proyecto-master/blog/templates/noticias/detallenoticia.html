@@ -1,6 +1,7 @@
 {% load static %}
 
 
+
 <!DOCTYPE html>
 <html  >
 <head>
@@ -11,36 +12,33 @@
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:image:src" content="">
   <meta property="og:image" content="">
-  <meta name="twitter:title" content="Page 5">
+  <meta name="twitter:title" content="noticias">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <link rel="shortcut icon" href="{% static 'assets/images/fondo-324x96.png' %}" type="image/x-icon">
   <meta name="description" content="">
   
   
+  <title>noticias</title>
+  <link rel="stylesheet" href="{% static 'assets/web/assets/mobirise-icons2/mobirise2.css' %}" >
+  <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap-grid.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap-reboot.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/dropdown/css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/socicon/css/styles.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/theme/css/style.css' %}">
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
+  <link rel="preload" as="style" href="{% static 'assets/mobirise/css/mbr-additional.css' %}"><link 
+  rel="stylesheet" href="{% static 'assets/mobirise/css/mbr-additional.css' %}" type="text/css">
   
-  <title>Detalle Noticia</title>
   
-    <link rel="stylesheet" href="{% static 'assets/web/assets/mobirise-icons2/mobirise2.css' %}" >
-    <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap-grid.min.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap-reboot.min.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/dropdown/css/style.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/socicon/css/styles.css' %}">
-    
-    <link rel="preload" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
-    <link rel="preload" as="style" href="{% static 'assets/mobirise/css/mbr-additional.css' %}"><link rel="stylesheet" href="{% static 'assets/mobirise/css/mbr-additional.css' %}" type="text/css">
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" 
-    rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" 
-    crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'css/detalle2.css' %}">
+  
   
 </head>
 <body>
-
-
-    <section data-bs-version="5.1" class="menu cid-tfRoycPRo3" once="menu" id="menu1-1p">
+  
+  <section data-bs-version="5.1" class="menu cid-tfRoycPRo3" once="menu" id="menu1-1p">
+    
     <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
         <div class="container-fluid">
             <div class="navbar-brand">
@@ -65,22 +63,32 @@
                     class="nav-link link text-black text-primary display-4" href="{% url 'inicio' %}"><span 
                     class="mobi-mbri mobi-mbri-home mbr-iconfont mbr-iconfont-btn" style="color: rgb(255, 255, 255);"></span>Inicio</a></li><li 
                     class="nav-item"><a 
-                    class="nav-link link text-black text-primary display-4" href="{% url 'noticias:listar_noticias' %}" target="_blank"><span 
+                    class="nav-link link text-black text-primary display-4" href="{% url 'noticias:listar_noticias' %}" ><span 
                     class="mobi-mbri mobi-mbri-globe-2 mbr-iconfont mbr-iconfont-btn" style="color: rgb(255, 255, 255);"></span>Noticias</a></li><li 
                     class="nav-item"><a 
                     class="nav-link link text-black text-primary display-4" href="{% url 'nosotros' %}">Nosotros</a></li><li 
                     class="nav-item"><a 
                     class="nav-link link text-black text-primary display-4" href="{% url 'contacto' %}">Contacto</a></li><li 
-                    class="nav-item dropdown"><a 
+                    class="nav-item dropdown">
+                    {% if user.is_superuser %}
+                                                <a 
                     class="nav-link link text-black dropdown-toggle display-4" href="" data-toggle="dropdown-submenu" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Staff</a><div 
                     class="dropdown-menu" aria-labelledby="dropdown-535"><a 
-                    class="text-black show dropdown-item text-primary display-4" href="{% url 'home' %}">>Cargar Noticia</a></div></li><li 
-                    class="nav-item dropdown"><a 
+                    class="text-black show dropdown-item text-primary display-4" href="{% url 'noticias:addnoti' %}">Cargar Noticia</a></div></li>
+                    {% endif %}
+                    <li 
+                    class="nav-item dropdown">
+                    {% if user.is_authenticated %}
+                    <a 
+                    class="text-black dropdown-item show text-primary display-4" href="{% url 'logout' %}" aria-expanded="false">Cerrar Sesion</a>
+                    {% else %}
+                    <a 
                     class="nav-link link text-black dropdown-toggle display-4" href="" data-toggle="dropdown-submenu" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Cuenta</a><div 
                     class="dropdown-menu" aria-labelledby="dropdown-734"><a 
-                    class="text-black dropdown-item show text-primary display-4" href="{% url 'login' %}" aria-expanded="false">Iniciar session</a><a
-                    class="text-black show dropdown-item text-primary display-4" href="{% url 'usuarios:registro' %">Registrarse</a></div></li></ul>
-                <div class="icons-menu">
+                    class="text-black dropdown-item show text-primary display-4" href="{% url 'login' %}" aria-expanded="false">Iniciar Sesion</a><a
+                    class="text-black show dropdown-item text-primary display-4" href="{% url 'usuarios:registro' %}">Registrarse</a></div></li></ul>
+                    {% endif %}
+                    <div class="icons-menu">
                     <a class="iconfont-wrapper" href="https://www.facebook.com/oportunidadecambio/?ref=page_internal" target="_blank">
                         <span class="p-2 mbr-iconfont socicon-facebook socicon"></span>
                     </a>
@@ -93,60 +101,57 @@
         </div>
     </nav>
 
-    
-    <!-- ver    
-        
-   
-        -->
 
 </section>
 
-    <br><br><br><br>
-    <div class="bg-info">
-        <section>
-            <div class="container px-4 px-lg-5 ">
-                <div class="row gx-4 gx-lg-5 align-items-center">
-                    <div class="col-md-6">
-                    {% if object.imagen %}
-                    <img class="card-img-top mb-5 mb-md-0" src="{{ object.imagen.url }}" alt="..." />
-                    {% else %}
-                    <img class="card-img-top mb-5 mb-md-0" src="{{ object.imagen.url }}" alt="..." />
-                    {% endif %}
-                    </div>
-                    <div class="col-md-6">
-                        <h4 class="fw-bolder">Autor: {{ object.autor }}</h4>
-                        <h4 class="fw-bolder">Titulo: {{ object.titulo }}</h4>
-                        <h4 class="fw-bolder">Creado: {{ object.creado }}</h4>
-                        <h4 class="fw-bolder">Categoria: {{ object.categoria }}</h4>
-                        <p class="lead border">{{ object.cuerpo }}</p>
-                    </div>
-                </div>
-            </div>
-            <div class="container px-4 px-lg-5 ">
-                <div class="media">
-                    {% if user.is_authenticated %}
-                    <form method="POST" action="{% url 'noticias:agregar_comentario' object.pk %}" class="form_comentarios">{% csrf_token %}
-                        <textarea name="coment" id="" cols="30" rows="10" placeholder="Comentario"></textarea>
-                        <button type="submit">Comentar</button>
-                    </form>
-                    {% endif %}
-                </div>
-                </div>
-                {% for x in object.obtener_mis_comentarios %}
-                <div class="container px-4 px-lg-5 border">
-                        <div class="media">
-                            <div class="media-body">
-                                <p class="nombre">{{ x.usuario }} ---<span>{{ x.creado }}</span></p>
-                                <p class="comentario">{{ x.texto }}</p>
-                            </div>
+<section data-bs-version="5.1" class="features3 cid-tfQgAcqH19" id="features3-s">
+    
+    <link rel="stylesheet" href="{% static 'css/detalle2.css' %}">
+        <div class="bg-info">
+            <section>
+                <br><br><br><br><br>
+                <div class="container px-4 px-lg-5 ">
+                    <div class="row gx-4 gx-lg-5 align-items-center">
+                        <div class="col-md-6">
+                        {% if object.imagen %}
+                        <img class="card-img-top mb-5 mb-md-0" src="{{ object.imagen.url }}" alt="..." />
+                        {% else %}
+                        <img class="card-img-top mb-5 mb-md-0" src="{{ object.imagen.url }}" alt="..." />
+                        {% endif %}
                         </div>
+                        <div class="col-md-8">
+                            <h3 class="fw-bolder">Autor: {{ object.autor }}</h3>
+                            <h2 class="fw-bolder">Titulo: {{ object.titulo }}</h2>
+                            <h4 class="fw-bolder">Creado: {{ object.creado }}</h4>
+                            <h4 class="fw-bolder">Categoria: {{ object.categoria }}</h4>
+                            <p class="lead">{{ object.cuerpo }}</p>
+                        </div>
+                    </div>
                 </div>
-                {% endfor %}
-        </section>
-
-
-
-<br><br><br><br><br><br><br><br>
+                <div class="container px-4 px-lg-5">
+                    <div class="media">
+                        {% if user.is_authenticated %}
+                        <form method="POST" action="{% url 'noticias:agregar_comentario' object.pk %}" class="form_comentarios">{% csrf_token %}
+                            <textarea name="coment" id="" cols="30" rows="10" placeholder="Comentario"></textarea>
+                            <button class = "btn btn-primary" type="submit">Comentar</button>
+                        </form>
+                        {% endif %}
+                    </div>
+                    </div>
+                    {% for x in object.obtener_mis_comentarios %}
+                    <div class="container px-4 px-lg-5 border">
+                            <div class="media">
+                                <div class="media-body">
+                                    <p class="nombre">{{ x.usuario }} ---<span>{{ x.creado }}</span></p>
+                                    <p class="comentario">{{ x.texto }}</p>
+                                </div>
+                            </div>
+                    </div>
+                    {% endfor %}
+            </section>
+            
+        
+</section>
 <section data-bs-version="5.1" class="footer3 cid-tfQZmdAVy8" once="footers" id="footer3-1n">
     <div class="container">
         <div class="media-container-row align-center mbr-white">
@@ -157,10 +162,22 @@
             </div>
         </div>
     </div>
-</section>><script 
+</section><section class="display-7" 
+style="padding: 0;align-items: center;justify-content: center;flex-wrap: wrap;    align-content: center;display: flex;position: relative;;"><a 
+    href="https://mobiri.se/2848548" 
+    style="flex: 1 1;;position: absolute;width: 100%;z-index:1;"><img alt="" 
+    style="height: 8rem;" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="></a><p 
+    style="margin: 0;text-align: center;" 
+    class=""> &#8204;</p><a 
+    style="z-index:1" href="https://mobirise.com"> </a></section><script 
     src="{% static 'assets/bootstrap/js/bootstrap.bundle.min.js' %}"></script>  <script 
     src="{% static 'assets/smoothscroll/smooth-scroll.js' %}"></script>  <script 
-    src="{% static 'assets/dropdown/js/navbar-dropdown.js' %}"></script>
+    src="{% static 'assets/ytplayer/index.js' %}"></script>  <script 
+    src="{% static 'assets/dropdown/js/navbar-dropdown.js' %}"></script>  <script 
+    src="{% static 'assets/theme/js/script.js' %}"></script>  
     
+  
+  
 </body>
 </html>
+
