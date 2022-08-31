@@ -1,0 +1,58 @@
+
+.cont_form {
+    width: 614px;
+    margin: 0px auto;
+    height: 698px;
+    position: center;
+    border: 3px solid rgb(35, 12, 245);
+    padding: 3px;
+    font-size: 20px;
+    box-shadow: 0px 0px 15px black;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+form {
+    width: 100%;
+    margin: 5px;
+    
+}
+
+input, textarea {
+    border: 1px solid rgb(99, 98, 98);
+    box-shadow: 0px 0px 2px rgb(190, 207, 252) inset;
+    background-color: #ccc;
+    color: rgb(99, 98, 98);
+}
+
+p {
+    padding: 8px;
+}
+
+input:focus, 
+textarea:focus{
+    border: 1px solid rgb(24, 3, 221);
+    color: black;
+}
+
+.btn-primaryy {
+    width: 110px;
+    height: 40px;
+    text-align: center;
+    background-color: rgb(75, 56, 243);
+    font-weight: bold;
+    border: 1px solid black;
+    border-radius: 4px;
+    color:black;
+    cursor: pointer;
+}
+
+.btn-primaryy:hover {
+    box-shadow: 0px 0px 4px black;
+}
+
+.btn-primaryy:active{
+    box-shadow: 0px 0px 3px gray inset;
+    background-color: rgb(114, 99, 248);
+}
+
